@@ -3,14 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+
+import {ConnectToSpringbootyService} from "./Service/connect-to-springbooty.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { CardComponent } from './card/card.component';
+import {ApplicationStateService} from "./Service/ApplicationStateService";
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardComponent,
+
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ConnectToSpringbootyService,ApplicationStateService],
+  bootstrap: [AppComponent ]
 })
 export class AppModule { }

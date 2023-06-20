@@ -1,0 +1,92 @@
+.card{
+  margin-top: 10vh;
+  margin-left: 10vw;
+  font-size: 3vh;
+  font-family: Monaco, serif;
+  position: relative;
+  height: 80vh;
+  background-color: rgb(255, 255, 255);
+  /*border-radius: 10px 500px;*/
+  border-radius: 2vh 9vw;
+  border: 1vh  solid rgb(255, 255, 255);
+
+}
+.content{
+  position: relative;
+  top: 2vh;
+  left: 2%;
+  width: 96%;
+  height: 96%;
+  background-color: rgba(49, 89, 151, 0.65);
+  border-radius: 2vh 9vw;
+}
+
+.body{
+  position: relative;
+  border-radius: 2vh 9vw;
+  top: 1%;
+  left: 5%;
+  width: 90%;
+  height: 98%;
+  /*background-color: red;*/
+  padding: 0.5vh;
+}
+
+
+#pic{
+  position: relative;
+  border: rgba(253, 253, 253, 0.16) solid 1vh ;
+  border-radius: 0.1vh 5vw;
+  /*z-index: 1;*/
+  top: -4vh;
+  width: 30vh;
+  height: 30vh;
+
+}
+
+#status{
+  padding: 0.2vh;
+  position: relative;
+  /*top: -65%;*/
+  font-size: 2vh;
+  top: -46%;
+  left: 4%;
+  background-color: rgba(255, 255, 255, 0.99);
+  border-radius: 0.1vh 0.5vw;
+  border: 0.1vh solid white;
+}
+#last {
+  font-size: 2vh;
+  position: relative;
+  top: -5.5vh;
+  left: 5.5vh;
+}
+
+
+
+
+
+.statusPic{
+  position: relative;
+  top: 0.3vh;
+  width: 1.5vh;
+  height: 1.5vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+::selection {
+  background-color: transparent;
+  color: inherit;
+}
+element {
+  pointer-events: none;
+}
