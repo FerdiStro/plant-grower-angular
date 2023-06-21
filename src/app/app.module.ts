@@ -9,6 +9,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { CardComponent } from './card/card.component';
 import {ApplicationStateService} from "./Service/ApplicationStateService";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,6 @@ import {ApplicationStateService} from "./Service/ApplicationStateService";
   imports: [
     BrowserModule,
     HttpClientModule
-
   ],
   providers: [ConnectToSpringbootyService,ApplicationStateService],
   bootstrap: [AppComponent ]
