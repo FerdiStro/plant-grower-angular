@@ -1,5 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {AllPlant} from "../Service/AllPlant";
+import {EventEmitter} from "@angular/core";
+
 
 @Component({
   selector: 'app-card',
@@ -17,6 +19,12 @@ export class CardComponent implements OnInit {
     last:"00-00-00",
     status: false,
     avg:""
+  }
+  @Output()
+  activatePumpEvent  =  new EventEmitter<string>();
+
+  activatePump(name:string){
+    this.activatePumpEvent.emit(name)
   }
 
   constructor() { }
