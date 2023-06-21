@@ -10,7 +10,7 @@ import {AllPlant} from "./AllPlant";
 export class ConnectToSpringbootyService {
 
 
-  private serverUrl = 'http://192.168.178.86:8081';
+  private serverUrl = 'http://localhost:8081';
   constructor(private http: HttpClient) {}
 
   getAllPlants(): Observable<AllPlant[]> {

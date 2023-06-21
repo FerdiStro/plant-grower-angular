@@ -15,7 +15,8 @@ export class CardComponent implements OnInit {
     mos: "",
     pump: 0,
     last:"00-00-00",
-    status: false
+    status: false,
+    avg:""
   }
 
   constructor() { }

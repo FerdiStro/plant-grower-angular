@@ -4,5 +4,6 @@ export interface AllPlant {
   pump: number;
   last:string;
   status:boolean;
+  avg: string;
 }
 
