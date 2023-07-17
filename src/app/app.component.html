@@ -1,4 +1,4 @@
-<div *ngFor="let plant of allPlant">
-  <app-card (activatePumpEvent)="activatePump($event)"  [mobile] = mobile [plant]=plant></app-card>
+<div *ngFor="let plant of allPlant" style="display: inline">
+  <app-card (activatePumpEvent)="activatePump($event)"  [plant]=plant></app-card>
 
 </div>

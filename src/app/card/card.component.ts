@@ -1,6 +1,7 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
 import {AllPlant} from "../Service/AllPlant";
 import {EventEmitter} from "@angular/core";
+import {ApplicationStateService} from "../Service/ApplicationStateService";
 
 
 @Component({
@@ -13,12 +14,15 @@ export class CardComponent implements OnInit {
   mobile:boolean  =  false;
   @Input()
   plant:AllPlant =  {
-    name:"",
-    mos: "",
-    pump: 0,
-    last:"00-00-00",
     status: false,
-    avg:""
+    plant: {
+      name: "",
+      mos: "",
+      pump: 0,
+      last: "",
+      avg:""
+    }
+
   }
   @Output()
   activatePumpEvent  =  new EventEmitter<string>();
@@ -27,7 +31,9 @@ export class CardComponent implements OnInit {
     this.activatePumpEvent.emit(name)
   }
 
-  constructor() { }
+  constructor(private service:ApplicationStateService) {
+    this.mobile=service.getIsMobileResolution()
+  }
 
   ngOnInit(): void {
   }

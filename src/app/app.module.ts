@@ -10,10 +10,11 @@ import { CardComponent } from './card/card.component';
 import {ApplicationStateService} from "./Service/ApplicationStateService";
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
+    CardComponent
 
 
   ],
