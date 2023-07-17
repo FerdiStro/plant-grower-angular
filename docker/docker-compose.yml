@@ -1,0 +1,8 @@
+version: '3'
+services:
+  plant-grower-angular:
+    image: plantgrowerangular
+    restart: always
+    ports:
+      - 18000:80
+
