@@ -1,9 +1,8 @@
 
-<div class ="card" [ngStyle]="{'width': (mobile  ==  false) ?  '40vh' : (mobile  ==  true) ? '70vh' : null  }">
-
+<div *ngIf="mobile==false" class ="card"  [ngStyle]="{'width': mobile ? '70vh' : '40vh'}">
   <div class="content">
     <div class="body">
-      <h1 id="headline"> {{plant.name}}</h1>
+      <h1 id="headline"> {{plant.plant.name}}</h1>
       <img id="pic" src="assets/img.png">
 
 
@@ -13,14 +12,14 @@
         <img *ngIf="plant.status == true "   class="statusPic" src="assets/Status/green.png" alt="reachable">
       </a>
       <a id="last">
-        {{plant.last}}
+        {{plant.plant.last}}
       </a>
       <a id="mos">
-        <img class="mosTempPic" src="assets/Symbols/temp.png" alt="thermometer">{{plant.mos}}
-        <img class="mosTempPic" src="assets/Symbols/avg.png" alt="avgSymbol">{{plant.avg}}
+        <img class="mosTempPic" src="assets/Symbols/temp.png" alt="thermometer">{{plant.plant.mos}}
+        <img class="mosTempPic" src="assets/Symbols/avg.png" alt="avgSymbol">{{plant.plant.avg}}
       </a>
       <div id="buttonSection">
-        <button (click)="activatePump(plant.name)" id="button">Pump</button>
+        <button (click)="activatePump(plant.plant.name)" id="button">Pump</button>
 
       </div>
 
@@ -31,3 +30,5 @@
 
 
 </div>
+
+

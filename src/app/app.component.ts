@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import {ConnectToSpringbootyService} from "./Service/connect-to-springbooty.service";
 import {AllPlant} from "./Service/AllPlant";
-import {ApplicationStateService} from "./Service/ApplicationStateService";
-import {error} from "@angular/compiler/src/util";
 import {interval, Subscription} from "rxjs";
 
 
@@ -14,7 +12,6 @@ import {interval, Subscription} from "rxjs";
 export class AppComponent {
   title = 'plant-grower-angular';
   allPlant : AllPlant[]  =  [] ;
-  mobile:boolean   = false;
   intervalSubscription: Subscription;
 
 
@@ -32,8 +29,7 @@ export class AppComponent {
   }
 
 
-  constructor(private service:ConnectToSpringbootyService, private state:ApplicationStateService) {
-    this.mobile  =  state.getIsMobileResolution();
+  constructor(private service:ConnectToSpringbootyService) {
     this.getALl()
     this.intervalSubscription = interval(20000) // 10 seconds
       .subscribe(() => {
