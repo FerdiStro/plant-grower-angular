@@ -1,11 +1,11 @@
 echo "Build Project"
 cd ..
+npm install
 ng build
-cd docker
 
 echo "Build Docker"
 docker build -t plantgrowerangular .
 
 echo "Deploy Docker"
-docker stack deploy -c docker-compose.yml PLANT
+docker stack deploy -c docker/docker-compose.yml PLANT
 
