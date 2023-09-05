@@ -4,7 +4,7 @@ npm install
 ng build
 
 echo "Build Docker"
-docker build -t plantgrowerangular .
+docker build -t plant-grower-angular .
 
 echo "Deploy Docker"
 #docker stack deploy -c docker/docker-compose.yml PLANT
