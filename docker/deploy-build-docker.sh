@@ -12,5 +12,5 @@ echo "Deploy Docker"
 
 cd docker
 
-docker-compose up -f
+docker-compose up -d
 
