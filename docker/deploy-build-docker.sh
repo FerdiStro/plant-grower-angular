@@ -1,10 +1,10 @@
-echo "Build Project"
+echo "Build Project ENV=prod"
 cd ..
 npm install
-ng build
+ng build --prod
 
 echo "Build Docker"
-docker build -t plantgrowerangular .
+docker build -t plant-grower-angular .
 
 echo "Deploy Docker"
 #docker stack deploy -c docker/docker-compose.yml PLANT

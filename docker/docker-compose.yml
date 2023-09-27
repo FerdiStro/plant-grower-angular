@@ -1,7 +1,7 @@
 version: '3'
 services:
   plant-grower-angular:
-    image: plantgrowerangular
+    image: plant-grower-angular
     ports:
       - "18000:80"
 

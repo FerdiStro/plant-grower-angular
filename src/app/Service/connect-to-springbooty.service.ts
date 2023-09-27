@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {map, Observable} from "rxjs";
 import {AllPlant} from "./AllPlant";
+import {environment} from "../../environments/environment";
+
 
 
 @Injectable({
@@ -10,7 +12,8 @@ import {AllPlant} from "./AllPlant";
 export class ConnectToSpringbootyService {
 
 
-  private serverUrl = 'http://localhost:8081';
+  private test = environment.apiUrl;
+  private serverUrl = 'http://127.0.0.1:8081';
   constructor(private http: HttpClient) {}
 
   getAllPlants(): Observable<AllPlant[]> {
