@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 
-import {ConnectToSpringbootyService} from "./Service/connect-to-springbooty.service";
+import {ConnectToSpringbootService} from "./Service/connect-to-springboot.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { CardComponent } from './card/card.component';
 import {ApplicationStateService} from "./Service/ApplicationStateService";
@@ -22,7 +22,7 @@ import {ApplicationStateService} from "./Service/ApplicationStateService";
     BrowserModule,
     HttpClientModule
   ],
-  providers: [ConnectToSpringbootyService,ApplicationStateService],
+  providers: [ConnectToSpringbootService,ApplicationStateService],
   bootstrap: [AppComponent ]
 })
 export class AppModule { }
