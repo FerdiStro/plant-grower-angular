@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ConnectToSpringbootyService} from "./Service/connect-to-springbooty.service";
+import {ConnectToSpringbootService} from "./Service/connect-to-springboot.service";
 import {AllPlant} from "./Service/AllPlant";
 import {interval, Subscription} from "rxjs";
 
@@ -29,7 +29,7 @@ export class AppComponent {
   }
 
 
-  constructor(private service:ConnectToSpringbootyService) {
+  constructor(private service:ConnectToSpringbootService) {
     this.getALl()
     this.intervalSubscription = interval(20000) // 10 seconds
       .subscribe(() => {

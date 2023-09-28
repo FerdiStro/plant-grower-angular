@@ -9,11 +9,11 @@ import {environment} from "../../environments/environment";
 @Injectable({
   providedIn: 'root'
 })
-export class ConnectToSpringbootyService {
+export class ConnectToSpringbootService {
 
 
-  private test = environment.apiUrl;
-  private serverUrl = 'http://127.0.0.1:8081';
+
+  private serverUrl = environment.apiUrl;
   constructor(private http: HttpClient) {}
 
   getAllPlants(): Observable<AllPlant[]> {
